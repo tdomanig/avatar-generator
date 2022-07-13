@@ -9,7 +9,12 @@ export const Body=()=>{
          
         <Group position='center' >
         <ShowRandom1 ></ShowRandom1>
-        <Button mt={15} >Erstelle deinen Avatar</Button>
+        
+        </Group>
+          
+        <Group position='center' >
+        <Button mt={15} >Download Picture</Button>
+        <Button mt={15} >Generate your own Avatar</Button>
         </Group>
         
         </AppShell>

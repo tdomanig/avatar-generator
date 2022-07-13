@@ -3,11 +3,11 @@ import {AppShell,Header,Group,} from '@mantine/core';
   export const Head =()=>{
     return(
         <AppShell
-        padding="md"
+       
         header={
-          <Header height={55} p="xs" >
-            <Group position="center" pb={20}>
-                <h1>PixelApp</h1>
+          <Header height={55}  >
+            <Group position="center" >
+                <h1 color='white'>PixelApp</h1>
                 
                 </Group>
               
