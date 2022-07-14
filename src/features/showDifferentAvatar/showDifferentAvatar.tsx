@@ -1,31 +1,36 @@
 import { Group,Text,Checkbox,ColorPicker,Space,Box,Stack,Button,Image,Loader} from "@mantine/core";
 import { useState } from "react";
 import { useShowDifferent } from "../../common/hooks/use-showDifferentAvatar";
+import { useForm } from "react-hook-form";
+
 
 export const ShowDifferentAvatar=()=>{
     const [value, onChange] = useState('rgba(47, 119, 150, 0.7)');
+    const {register, handleSubmit, watch, formState:{errors}}=useForm()
+    const onSubmit=(data: any)=> console.log(data);
     
     return(
+        <form onSubmit={handleSubmit(onSubmit)}>
         <Group position="center">
         <Stack>
         <Space  h={25}></Space>
         <Group position="center"  >
         <Stack>
-            <Checkbox label="male"></Checkbox>
-            <Checkbox label="female"></Checkbox>
-            <Checkbox label="human"></Checkbox>
+            <Checkbox {...register("sprite")} label="male"></Checkbox>
+            <Checkbox {...register("sprite")} label="female"></Checkbox>
+            <Checkbox {...register("sprite")} label="human"></Checkbox>
         </Stack>
            
         <Stack>
-            <Checkbox label="identicon"></Checkbox>
-            <Checkbox label="initials"></Checkbox>
-            <Checkbox label="avataaars"></Checkbox>
+            <Checkbox {...register("sprite")} label="identicon"></Checkbox>
+            <Checkbox {...register("sprite")} label="initials"></Checkbox>
+            <Checkbox {...register("sprite")} label="avataaars"></Checkbox>
         </Stack>
             
         <Stack>
-            <Checkbox label="jdenticon"></Checkbox>
-            <Checkbox label="gridy"></Checkbox>
-            <Checkbox label="micah"></Checkbox>
+            <Checkbox {...register("sprite")} label="jdenticon"></Checkbox>
+            <Checkbox {...register("sprite")} label="gridy"></Checkbox>
+            <Checkbox {...register("sprite")} label="micah"></Checkbox>
         </Stack>
             
         </Group>
@@ -47,7 +52,7 @@ export const ShowDifferentAvatar=()=>{
            
         </Group>
         <Group position="center">
-        <Button><Text>Generate</Text></Button>
+        <Button type="submit"><Text>Generate</Text></Button>
         
         </Group>
         <Space h={25}></Space>
@@ -57,6 +62,7 @@ export const ShowDifferentAvatar=()=>{
         
 
         </Group>
+        </form>
     )
    
 }
