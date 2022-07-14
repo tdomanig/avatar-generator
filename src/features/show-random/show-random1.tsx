@@ -1,5 +1,5 @@
 import {useShowAll} from '../../common/hooks/use-showRandom'
-import { Loader,Text,Button,Group } from '@mantine/core'
+import { Loader,Text,Button,Group,Stack } from '@mantine/core'
 
 export const ShowRandom1=()=>{
   const {data,isLoading,isError,error}=useShowAll()
@@ -11,23 +11,19 @@ export const ShowRandom1=()=>{
     }
     
     return data ?(
-      <div style={{display:"flex"}} >
-       
-              <Group>
+      
+        <Group position='center'>
+        <Stack >
+            <Group position='center'>
                 <img src={data} alt="Hier könnte ihre Werbung Stehen" height={500}  width={500}/>
               </Group>
-              <Group >
+              <Group position='center'>
               <a href={data as string} download={data as string}><Button>Download pic</Button></a>
               </Group>
-              
-      
-      </div>
+            </Stack>
         
-   
-     
-      
-        
-    ):<Text color="red">No Data!!</Text>
+        </Group>
+):<Text color="red">No Data!!</Text>
     
     }
 
