@@ -1,4 +1,4 @@
-import {AppShell,Container,Group,Box,Footer} from '@mantine/core';
+import {AppShell,Container,Group,Box,Footer,Text} from '@mantine/core';
 
 export const Foot=()=>{
     return(
@@ -7,7 +7,7 @@ export const Foot=()=>{
                 <Container>
                     <Group noWrap>
                         <Box sx={{ whiteSpace: 'nowrap' }}>
-                            <strong>I bin da Footer</strong>
+                            <Text color="white">I bin da Footer</Text>
                         </Box>
                         <Box>
 

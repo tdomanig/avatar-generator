@@ -1,6 +1,6 @@
 import {Layout} from './common/components/layout'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
-
+import { ShowDifferentAvatar } from './features/showDifferentAvatar/showDifferentAvatar';
 export const AppRouter=()=>{
 return(
     <BrowserRouter>
@@ -12,9 +12,8 @@ return(
               <Outlet></Outlet>
             </Layout>
           }
-        >
-   
-        </Route>
+        ></Route>
+        <Route path="/differentAvatar" element={<ShowDifferentAvatar/>}></Route>
       </Routes>
     </BrowserRouter>
 )

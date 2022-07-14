@@ -5,7 +5,8 @@ const randomseed=randomSprite()
 console.log(randomseed)
 const seed=makeid()
 export const useShowAll =()=>{
-  return useQuery({
+  
+  return   useQuery({
       
       queryFn:async ()=>{
         const response = await fetch(`https://avatars.dicebear.com/api/${sprite[randomseed]}/${seed}.svg`,{method:'GET'})

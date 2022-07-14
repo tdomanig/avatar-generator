@@ -1,4 +1,4 @@
-import {AppShell,Header,Group,} from '@mantine/core';
+import {AppShell,Header,Group,Text} from '@mantine/core';
 
   export const Head =()=>{
     return(
@@ -7,7 +7,7 @@ import {AppShell,Header,Group,} from '@mantine/core';
         header={
           <Header height={55}  >
             <Group position="center" >
-                <h1 color='white'>PixelApp</h1>
+                <Text color='white' size='xl' >PixelApp</Text>
                 
                 </Group>
               

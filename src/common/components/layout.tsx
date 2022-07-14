@@ -11,7 +11,7 @@ type LayoutProps={
   export const Layout:FC<LayoutProps> = () => {
     return (
     <div>
-    <Head Background-Color="red"/>
+    <Head />
     <Body/>
     <Foot/>
     </div>
